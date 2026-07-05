@@ -1,0 +1,45 @@
+__pycache__/
+*.py[cod]
+
+# Data and official challenge keys
+data/
+datasets/
+ASVspoof*/
+LA-keys-stage-1/
+DF-keys-stage-1/
+
+# Keep lightweight protocol files shipped with this repo.
+!database/
+!database/ASVspoof_DF_cm_protocols/
+!database/ASVspoof_LA_cm_protocols/
+!database/ASVspoof_DF_cm_protocols/*.txt
+!database/ASVspoof_LA_cm_protocols/*.txt
+
+# Model artifacts
+models/
+logs/
+runs/
+checkpoints/
+*.pt
+*.pth
+*.ckpt
+
+# Evaluation outputs
+Scores/
+scores*.txt
+eval_outputs/
+result*.txt
+train*.log
+eval*.log
+
+# Local environments
+.env
+.venv/
+venv/
+*.ipynb_checkpoints/
+
+# IDE/OS
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/

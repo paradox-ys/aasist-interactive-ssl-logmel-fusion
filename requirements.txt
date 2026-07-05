@@ -1,0 +1,8 @@
+librosa==0.9.1
+numpy
+soundfile
+tensorboardX==2.5
+torch
+torchaudio
+transformers
+pandas
