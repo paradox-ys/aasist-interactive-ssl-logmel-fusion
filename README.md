@@ -121,6 +121,18 @@ transpose + unsqueeze
 - heterogeneous graph attention 建模时域与频域线索之间的交互；
 - 分类头输出 bonafide/spoof logits。
 
+## Experimental Results
+
+The models were trained on ASVspoof2019 LA train, selected on ASVspoof2019 LA dev, and evaluated on ASVspoof2021 LA eval. Lower values are better.
+
+| Model variant | ASVspoof2019 LA dev EER | ASVspoof2021 LA EER | ASVspoof2021 LA min t-DCF | Note |
+|---|---:|---:|---:|---|
+| log-Mel fusion | 0.579153% | 2.28% | 0.2388 | SSL branch + deep log-Mel branch |
+| **IADF+ interactive fusion** | 0.236595% | **1.72%** | **0.2312** | Best 2021 LA generalization result |
+| IADF+AOCloss fixed | **0.156982%** | 1.75% | 0.2338 | Best dev EER, slightly worse on 2021 LA |
+
+In the current cleaned public version, the main released model is **IADF+ interactive fusion**. The AOCloss row is kept as an internal ablation reference: it improves the 2019 LA dev EER, but the IADF+ model gives the best ASVspoof2021 LA evaluation result.
+
 ## Repository Structure
 
 ```text
